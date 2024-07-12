@@ -20,7 +20,7 @@ export default function Header() {
 
     return (
         <header id='header'>
-            <img id='logo' src="/images/logo.jpg" alt={db.companyInfo.name} onClick={() => navigate('/')} />
+            <img id='logo' src="./images/logo.jpg" alt={db.companyInfo.name} onClick={() => navigate('/')} />
             <h3>{db.companyInfo.name}</h3>
             <button type="button" className="btn btn-dark dropdown-toggle dropdown-toggle-split d-flex flex-row align-items-center gap-2" data-bs-toggle="dropdown" aria-expanded="false">
                 {open ? <b className='text-success'>Open</b> : <b className='text-danger'>Fechado</b>}
