@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 //Pages
 import Home from './routes/Home'
 import ErrorPage from './routes/ErrorPage'
+import Product from './routes/Product'
 
 const router = createBrowserRouter([
   {
@@ -15,8 +16,16 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: '/CardapioBase/',
+        path: '/Cardapio/',
         element: <Home />,
+      },
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: '/Cardapio/product/:productName',
+        element: <Product />,
       },
     ]
   },

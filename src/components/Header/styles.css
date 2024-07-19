@@ -21,7 +21,7 @@
 
 
 #header {
-    height: 33vh;
+    height: 200px;
     background-image: url('/images/fundo_header.jpg');
     display: flex;
     flex-direction: column;

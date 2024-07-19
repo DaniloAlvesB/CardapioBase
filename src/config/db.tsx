@@ -1,4 +1,7 @@
+import items from "./items"
+
 const db: any = {
+
     companyInfo: {
         name: 'Cardápio Online',
         phrase: 'Obrigado por nos esolher! Volte sempre!',
@@ -9,8 +12,10 @@ const db: any = {
         twitter: '',
         whatsapp: '5516992659359'
     },
+
     weekDay: ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'],
     weekDayPtBr: ['Domingo', 'Segunda-Feira', 'Terça-Feira', 'Quarta-Feira', 'Quinta-Feira', 'Sexta-Feira', 'Sábado'],
+
     openingHours: {
         monday: 'Closed',
         tuesday: 'Closed',
@@ -19,7 +24,11 @@ const db: any = {
         friday: ['14:00:00', '00:00:00'],
         saturday: ['14:00:00', '00:00:00'],
         sunday: ['14:00:00', '00:00:00'],
-    }
+    },
+
+    products_keys: Object.keys(items)    ,
+    products: items,
+
 }
 
 export default db

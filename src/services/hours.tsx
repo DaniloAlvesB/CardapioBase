@@ -42,7 +42,15 @@ const hours = {
                 actHours: this.convertToSeconds(`${currentTime.hour}:${currentTime.minutes}:${currentTime.seconds}`)
             }
 
-            if(allToSeconds.actHours > allToSeconds.openHours && allToSeconds.actHours < allToSeconds.closeHours) {
+            var openH = allToSeconds.openHours
+            var closeH = allToSeconds.closeHours
+            if(openH == 0){
+                openH = 24 * 60 * 60
+            }
+            if(closeH == 0){
+                closeH = 24 * 60 * 60
+            }
+            if(allToSeconds.actHours > openH && allToSeconds.actHours < closeH) {
                 result.open = true
             }else{
                 result.open = false
